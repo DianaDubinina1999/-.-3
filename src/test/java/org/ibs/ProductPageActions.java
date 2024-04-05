@@ -16,24 +16,28 @@ public class ProductPageActions {
     public void navigateToProductPage() {
         driver.findElement(By.id("navbarDropdown")).click();
         driver.findElement(By.linkText("Товары")).click();
+
     }
+    public void CreateNewProduct() {
+    driver.findElement(By.cssSelector(".btn-grou > .btn")).click();
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);}
 
     public void addName(String name) {
-        driver.findElement(By.cssSelector(".btn-grou > .btn")).click();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.id("name")).click();
         driver.findElement(By.id("name")).sendKeys(name);
+
     }
 
-    public void saveProduct(String name) {
+    public void saveProduct() {
         driver.findElement(By.id("save")).click();
         driver.navigate().refresh();
     }
 
     public void selectType(String type) {
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+
         WebElement dropdown = driver.findElement(By.id("type"));
         dropdown.findElement(By.xpath("//option[. = '" + type + "']")).click();
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     public void checkExotic() {

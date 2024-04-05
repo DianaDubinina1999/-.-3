@@ -14,34 +14,42 @@ public class TestRunner {
         ValidationUtils validationUtils = new ValidationUtils(driver);
 
         actions.navigateToProductPage();
+
+        actions.CreateNewProduct();
         actions.addName("Огурец");
-        validationUtils.isNameAdded();
-        actions.saveProduct("Огурец");
+        validationUtils.isNameAdded("Огурец");
+        actions.saveProduct();
         validationUtils.isProductExist("Огурец");
 
+
+        actions.CreateNewProduct();
         actions.addName("Вишня");
-        validationUtils.isNameAdded();
+        validationUtils.isNameAdded("Вишня");
         actions.selectType("Фрукт");
         validationUtils.isTypeExist("Фрукт");
-        actions.saveProduct("Вишня");
+        actions.saveProduct();
         validationUtils.isProductExist("Вишня");
 
-        actions.navigateToProductPage();
+
+        actions.CreateNewProduct();
         actions.addName("Корнишон");
-        validationUtils.isNameAdded();
+        validationUtils.isNameAdded("Корнишон");
         actions.checkExotic();
         validationUtils.isCheckBoxExist("Корнишон");
-        actions.saveProduct("Корнишон");
+        actions.saveProduct();
         validationUtils.isProductExist("Корнишон");
 
+
+        actions.CreateNewProduct();
         actions.addName("Манго");
-        validationUtils.isNameAdded();
+        validationUtils.isNameAdded("Манго");
         actions.selectType("Фрукт");
         validationUtils.isTypeExist("Фрукт");
         actions.checkExotic();
         validationUtils.isCheckBoxExist("Манго");
-        actions.saveProduct("Манго");
+        actions.saveProduct();
         validationUtils.isProductExist("Манго");
+
 
         actions.resetDatabase();
 
