@@ -16,35 +16,31 @@ public class TestRunner {
         actions.navigateToProductPage();
         actions.addProduct("Огурец");
         actions.saveProduct("Огурец");
-        validationUtils.isNameAdded("Огурец");
-        validationUtils.isTypeExist("Овощ");
-        validationUtils.isCheckBoxExist("Огурец");
+        validationUtils.isNameAdded();
         validationUtils.isElementPresent("Огурец");
 
         actions.addProduct("Вишня");
         actions.selectType("Фрукт");
-        actions.saveProduct("Вишня");
-        validationUtils.isNameAdded("Вишня");
         validationUtils.isTypeExist("Фрукт");
-        validationUtils.isCheckBoxExist("Вишня");
+        actions.saveProduct("Вишня");
+        validationUtils.isNameAdded();
         validationUtils.isElementPresent("Вишня");
 
         actions.navigateToProductPage();
         actions.addProduct("Корнишон");
         actions.checkExotic();
-        actions.saveProduct("Корнишон");
-        validationUtils.isNameAdded("Корнишон");
-        validationUtils.isTypeExist("Овощ");
         validationUtils.isCheckBoxExist("Корнишон");
+        actions.saveProduct("Корнишон");
+        validationUtils.isNameAdded();
         validationUtils.isElementPresent("Корнишон");
 
         actions.addProduct("Манго");
         actions.selectType("Фрукт");
-        actions.checkExotic();
-        actions.saveProduct("Манго");
-        validationUtils.isNameAdded("Манго");
         validationUtils.isTypeExist("Фрукт");
+        actions.checkExotic();
         validationUtils.isCheckBoxExist("Манго");
+        actions.saveProduct("Манго");
+        validationUtils.isNameAdded();
         validationUtils.isElementPresent("Манго");
 
         actions.resetDatabase();

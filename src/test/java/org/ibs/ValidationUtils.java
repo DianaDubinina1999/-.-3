@@ -11,34 +11,29 @@ public class ValidationUtils {
     }
 
     public void isElementPresent(String name) {
-        if (!driver.findElements(By.id("name")).isEmpty()) {
-            System.out.println("Продукт" + " " + name + "  добавлен на страницу");
-        } else {
-            System.out.println("Продукт" + " " + name + " не добавлен на страницу");
+        if (driver.findElements(By.id("name")).isEmpty()) {
+            throw new AssertionError("Продукт"+ " " + name + " "+ "не добавлен");
         }
     }
 
     public void isCheckBoxExist(String name) {
-        if (driver.findElement(By.id("exotic")).isSelected()) {
-            System.out.println("Чек-бокс для" + " " + name + " " + "выбран");
-        } else {
-            System.out.println("Чек-бокс для" + " " + name + " " + "не выбран");
+        if (!driver.findElement(By.id("exotic")).isSelected()) {
+            throw new AssertionError("Чек-бокс для"+ " " + name + " "+ "не выбран");
+            }
         }
-    }
 
     public void isTypeExist(String type) {
-        if (driver.findElement(By.id("type")).isEnabled()) {
-            System.out.println("Тип" + " " + type + " " + "выбран");
-        } else {
-            System.out.println("Тип" + " " + type + " " + " не выбран");
+            if (!driver.findElement(By.id("type")).isEnabled()){
+                throw new AssertionError("Тип" + " " + type + " " + " не выбран");
+            }
+        }
+
+
+
+    public void isNameAdded() {
+            if (driver.findElements(By.id("name")).isEmpty()) {
+                throw new AssertionError("Наименование не добавлено");
+            }
         }
     }
 
-    public void isNameAdded(String name) {
-        if (!driver.findElements(By.id("name")).isEmpty()) {
-            System.out.println("Наименование" + " " + name + " добавлено");
-        } else {
-            System.out.println("Наименование" + " " + name + " добавлено");
-        }
-    }
-}
