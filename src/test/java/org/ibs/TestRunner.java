@@ -15,32 +15,34 @@ public class TestRunner {
 
         actions.navigateToProductPage();
         actions.addProduct("Огурец");
-        actions.saveProduct("Огурец");
         validationUtils.isNameAdded();
+        actions.saveProduct("Огурец");
+
         validationUtils.isElementPresent("Огурец");
 
         actions.addProduct("Вишня");
+        validationUtils.isNameAdded();
         actions.selectType("Фрукт");
         validationUtils.isTypeExist("Фрукт");
         actions.saveProduct("Вишня");
-        validationUtils.isNameAdded();
+
         validationUtils.isElementPresent("Вишня");
 
         actions.navigateToProductPage();
         actions.addProduct("Корнишон");
+        validationUtils.isNameAdded();
         actions.checkExotic();
         validationUtils.isCheckBoxExist("Корнишон");
         actions.saveProduct("Корнишон");
-        validationUtils.isNameAdded();
         validationUtils.isElementPresent("Корнишон");
 
         actions.addProduct("Манго");
+        validationUtils.isNameAdded();
         actions.selectType("Фрукт");
         validationUtils.isTypeExist("Фрукт");
         actions.checkExotic();
         validationUtils.isCheckBoxExist("Манго");
         actions.saveProduct("Манго");
-        validationUtils.isNameAdded();
         validationUtils.isElementPresent("Манго");
 
         actions.resetDatabase();
