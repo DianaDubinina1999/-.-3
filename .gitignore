@@ -3,9 +3,13 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-C:\Users\U_M1D74\-.-3\.idea
+
 ### IntelliJ IDEA ###
 -.-3/.idea/
+-.-3/.idea/encodings.xml
+-.-3/.idea/misc.xml
+-.-3\.idea\vcs.xml
+-.-3\.idea\workspace.xml
 -.-3/.idea/modules.xml
 -.-3/.idea/jarRepositories.xml
 -.-3/.idea/compiler.xml
