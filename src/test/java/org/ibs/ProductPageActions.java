@@ -18,7 +18,7 @@ public class ProductPageActions {
         driver.findElement(By.linkText("Товары")).click();
     }
 
-    public void addProduct(String name) {
+    public void addName(String name) {
         driver.findElement(By.cssSelector(".btn-grou > .btn")).click();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.id("name")).click();

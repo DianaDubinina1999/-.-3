@@ -14,12 +14,12 @@ public class TestRunner {
         ValidationUtils validationUtils = new ValidationUtils(driver);
 
         actions.navigateToProductPage();
-        actions.addProduct("Огурец");
+        actions.addName("Огурец");
         validationUtils.isNameAdded();
         actions.saveProduct("Огурец");
         validationUtils.isProductExist("Огурец");
 
-        actions.addProduct("Вишня");
+        actions.addName("Вишня");
         validationUtils.isNameAdded();
         actions.selectType("Фрукт");
         validationUtils.isTypeExist("Фрукт");
@@ -27,14 +27,14 @@ public class TestRunner {
         validationUtils.isProductExist("Вишня");
 
         actions.navigateToProductPage();
-        actions.addProduct("Корнишон");
+        actions.addName("Корнишон");
         validationUtils.isNameAdded();
         actions.checkExotic();
         validationUtils.isCheckBoxExist("Корнишон");
         actions.saveProduct("Корнишон");
         validationUtils.isProductExist("Корнишон");
 
-        actions.addProduct("Манго");
+        actions.addName("Манго");
         validationUtils.isNameAdded();
         actions.selectType("Фрукт");
         validationUtils.isTypeExist("Фрукт");
