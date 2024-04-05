@@ -17,16 +17,14 @@ public class TestRunner {
         actions.addProduct("Огурец");
         validationUtils.isNameAdded();
         actions.saveProduct("Огурец");
-
-        validationUtils.isElementPresent("Огурец");
+        validationUtils.isProductExist("Огурец");
 
         actions.addProduct("Вишня");
         validationUtils.isNameAdded();
         actions.selectType("Фрукт");
         validationUtils.isTypeExist("Фрукт");
         actions.saveProduct("Вишня");
-
-        validationUtils.isElementPresent("Вишня");
+        validationUtils.isProductExist("Вишня");
 
         actions.navigateToProductPage();
         actions.addProduct("Корнишон");
@@ -34,7 +32,7 @@ public class TestRunner {
         actions.checkExotic();
         validationUtils.isCheckBoxExist("Корнишон");
         actions.saveProduct("Корнишон");
-        validationUtils.isElementPresent("Корнишон");
+        validationUtils.isProductExist("Корнишон");
 
         actions.addProduct("Манго");
         validationUtils.isNameAdded();
@@ -43,7 +41,7 @@ public class TestRunner {
         actions.checkExotic();
         validationUtils.isCheckBoxExist("Манго");
         actions.saveProduct("Манго");
-        validationUtils.isElementPresent("Манго");
+        validationUtils.isProductExist("Манго");
 
         actions.resetDatabase();
 

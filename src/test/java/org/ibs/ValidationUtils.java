@@ -10,7 +10,7 @@ public class ValidationUtils {
         this.driver = driver;
     }
 
-    public void isElementPresent(String name) {
+    public void isProductExist(String name) {
         if (driver.findElements(By.id("name")).isEmpty()) {
             throw new AssertionError("Продукт"+ " " + name + " "+ "не добавлен");
         }
