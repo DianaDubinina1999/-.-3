@@ -26,7 +26,7 @@ public class TestRunner {
         actions.saveProduct("Вишня");
         validationUtils.isProductExist("Вишня");
 
-        actions.navigateToProductPage();
+
         actions.addName("Корнишон");
         validationUtils.isNameAdded();
         actions.checkExotic();
