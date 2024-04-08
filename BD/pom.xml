@@ -39,10 +39,12 @@
         <artifactId>mssql-jdbc</artifactId>
         <version>12.6.1.jre11</version>
     </dependency>
+        <!--jdbc:h2:tcp://localhost:9092/mem:testdb -->
     <dependency>
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
         <version>1.4.200</version>
+        <scope>runtime</scope>
     </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -50,12 +52,7 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
+
     </dependencies>
 
 </project>

@@ -1,8 +1,14 @@
 package org.example;
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 
 public class ProductPageActions {
+
+    public ProductPageActions () throws SQLException {
+    }
 
     static boolean isFoundAll (Statement statement) throws SQLException {
         String query = "SELECT * FROM FOOD WHERE FOOD_ID BETWEEN 5 AND 8";
@@ -31,6 +37,12 @@ public class ProductPageActions {
         return cucumberFound && artichokeFound && plumFound && mangoFound;
     }
 
+    static boolean isTableBase (Statement statement) throws SQLException {
+        String query = "SELECT * FROM FOOD WHERE FOOD_ID >= 5";
+        ResultSet resultSet = statement.executeQuery (query);
+        return !resultSet.next (); // Вернуть true, если результат пустой
+    }
+
     void DeleteNewProducts (Statement statement) throws SQLException {
         String delete = "DELETE from FOOD where FOOD_ID >= 5";
         statement.executeUpdate (delete);
@@ -38,7 +50,7 @@ public class ProductPageActions {
 
     void AddNewProducts (Statement statement) throws SQLException {
         String insert = " insert into FOOD(FOOD_ID,FOOD_NAME,FOOD_TYPE,FOOD_EXOTIC) values " +
-                "(5,'Огурец','VEGETABLE',0), (6,'Артишок','VEGETABLE',1)," +
+         "(5,'Огурец','VEGETABLE',0), (6,'Артишок','VEGETABLE',1)," +
                 "(7,'Слива','FRUIT',0),(8,'Манго','FRUIT',1)";
         statement.executeUpdate (insert);
     }
